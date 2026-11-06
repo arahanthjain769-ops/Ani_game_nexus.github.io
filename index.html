@@ -1,0 +1,64 @@
+ <!DOCTYPE html>
+<html>
+<head>
+<title>Moving Car</title>
+
+<style>
+body {
+    margin: 0;
+    overflow: hidden;
+    background: skyblue;
+}
+
+.sky {
+    height: 70vh;
+    background: skyblue;
+}
+
+.road {
+    height: 30vh;
+    background: #444;
+    position: relative;
+}
+
+.line {
+    position: absolute;
+    top: 50%;
+    width: 200%;
+    border-top: 5px dashed white;
+    animation: road 2s linear infinite;
+}
+
+.car {
+    position: absolute;
+    bottom: 30px;
+    left: -200px;
+    font-size: 80px;
+    animation: move 5s linear infinite;
+}
+
+@keyframes move {
+    from { left: -200px; }
+    to { left: 100%; }
+}
+
+@keyframes road {
+    from { transform: translateX(0); }
+    to { transform: translateX(-100px); }
+}
+</style>
+</head>
+
+<body>
+
+<div class=“sky”>
+    <h1 style=“text-align:center;”>Moving Car Animation</h1>
+</div>
+
+<div class=“road”>
+    <div class=“line”></div>
+    <div class=“car”>🚗</div>
+</div>
+
+</body>
+</html>
